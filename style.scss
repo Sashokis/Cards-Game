@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'stratosskyengweb-regular';
-  src: url('fonts/stratosskyengweb-regular.woff') format('woff');
+  font-family: "stratosskyengweb-regular";
+  src: url("fonts/stratosskyengweb-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: 'stratosskyengweb-regular', sans-serif;
+  font-family: "stratosskyengweb-regular", sans-serif;
   background-color: #004980;
 }
 
@@ -14,18 +14,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
-.center{
+.center {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.selection-form{
+.selection-form {
   width: 480px;
   height: 459px;
   border-radius: 12px;
@@ -42,32 +41,52 @@ body {
     text-align: center;
   }
 
-  &__card-container{
+
+  &__card-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;  
   }
 
-  &__start-button{
+  &__card-container input[type="radio"] {
+    display: none;
+  }
+
+  /* изменение кнопки */
+  &__card-container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #004980;
+    font-size: 64px;
+    width: 98px;
+    height: 98px;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-right: 10px;
+  }
+
+  /* Убираем правый отступ у последней кнопки */
+  &__card-container label:last-child {
+    margin-right: 0;
+  }
+
+  /* выбранный элемент */
+  &__card-container  input[type="radio"]:checked+label {
+    border-radius: 12px;
+    background-color: #004980;
+    color: #fff;
+    border-color: transparent;
+  }
+
+
+  &__start-button {
     color: #fff;
     background-color: #7AC100;
-    width: 246px; 
+    width: 246px;
     height: 50px;
     font-size: 24px;
     border-radius: 12px;
     margin-top: 67px;
     border-color: transparent;
   }
-}      
-
-.card{
-  width: 98px;
-  height: 98px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  background-color: #fff;
-  color: #004980;
-  font-size: 64px;
 }

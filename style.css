@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "stratosskyengweb-regular";
   src: url("fonts/stratosskyengweb-regular.woff") format("woff");
@@ -32,6 +33,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* изменение кнопки */
+  /* Убираем правый отступ у последней кнопки */
+  /* выбранный элемент */
 }
 .selection-form__header {
   font-size: 40px;
@@ -41,8 +45,31 @@ body {
 }
 .selection-form__card-container {
   display: flex;
+}
+.selection-form__card-container input[type=radio] {
+  display: none;
+}
+.selection-form__card-container label {
+  display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  cursor: pointer;
+  color: #004980;
+  font-size: 64px;
+  width: 98px;
+  height: 98px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+.selection-form__card-container label:last-child {
+  margin-right: 0;
+}
+.selection-form__card-container input[type=radio]:checked + label {
+  border-radius: 12px;
+  background-color: #004980;
+  color: #fff;
+  border-color: transparent;
 }
 .selection-form__start-button {
   color: #fff;
@@ -53,16 +80,4 @@ body {
   border-radius: 12px;
   margin-top: 67px;
   border-color: transparent;
-}
-
-.card {
-  width: 98px;
-  height: 98px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  background-color: #fff;
-  color: #004980;
-  font-size: 64px;
 }/*# sourceMappingURL=style.css.map */
