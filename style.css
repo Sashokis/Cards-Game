@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "stratosskyengweb-regular";
+  src: url("fonts/stratosskyengweb-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "stratosskyengweb-regular", sans-serif;
+  background-color: #004980;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.center {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection-form {
+  width: 480px;
+  height: 459px;
+  border-radius: 12px;
+  background-color: #C2F5FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* изменение кнопки */
+  /* Убираем правый отступ у последней кнопки */
+  /* выбранный элемент */
+}
+.selection-form__header {
+  font-size: 40px;
+  color: #004980;
+  margin-bottom: 48px;
+  text-align: center;
+}
+.selection-form__card-container {
+  display: flex;
+}
+.selection-form__card-container input[type=radio] {
+  display: none;
+}
+.selection-form__card-container label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #004980;
+  font-size: 64px;
+  width: 98px;
+  height: 98px;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-right: 10px;
+}
+.selection-form__card-container label:last-child {
+  margin-right: 0;
+}
+.selection-form__card-container input[type=radio]:checked + label {
+  border-radius: 12px;
+  background-color: #004980;
+  color: #fff;
+  border-color: transparent;
+}
+.selection-form__start-button {
+  color: #fff;
+  background-color: #7AC100;
+  width: 246px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 12px;
+  margin-top: 67px;
+  border-color: transparent;
+}/*# sourceMappingURL=style.css.map */
